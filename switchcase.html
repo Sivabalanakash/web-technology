@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch statement example</title>
+</head>
+<body>
+	<label for="day">Select a number from 1 to n:</label>
+	<select id="day" onchange="displayMessage()">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+	</select>
+
+	<p id="message"></p>
+
+	<script>
+		function displayMessage() {
+			const dayNumber = document.getElementById("day").value;
+			let day;
+
+			switch(dayNumber) {
+				case "1":
+					day = "Monday";
+					break;
+				case "2":
+					day = "Tuesday";
+					break;
+				case "3":
+					day = "Wednesday";
+					break;
+				case "4":
+					day = "Thursday";
+					break;
+				case "5":
+					day = "Friday";
+					break;
+				case "6":
+					day = "Saturday";
+					break;
+				case "7":
+					day = "Sunday";
+					break;
+				default:
+					day = "Invalid day";
+			}
+
+			document.getElementById("message").innerHTML = "The day is " + day + ".";
+		}
+	</script>
+</body>
+</html>

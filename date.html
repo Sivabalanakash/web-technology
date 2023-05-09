@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Web Page</title>
+    <script>
+      function updateDateTime() {
+        var now = new Date();
+        var datetime = now.toISOString();
+        document.getElementById("datetime").setAttribute("datetime", datetime);
+        document.getElementById("datetime").textContent = now.toLocaleString();
+      }
+      setInterval(updateDateTime, 1000);
+    </script>
+  </head>
+  <body onload="updateDateTime()">
+    <p>The current date and time is <time id="datetime"></time></p>
+  </body>
+</html>
